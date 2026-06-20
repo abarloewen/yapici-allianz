@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beitragsrechner — Allianz Agentur Yapıcı</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <nav class="nav container">
+    <a class="brand" href="index.html"><img src="logo.svg" alt="Yapıcı Allianz"></a>
+    <div class="nav__links" id="navLinks">
+      <a href="index.html" data-i18n="nav.home"></a>
+      <div class="nav__drop">
+        <a href="leistungen.html" class="nav__droptoggle" data-i18n="nav.services"></a>
+        <div class="nav__menu">
+          <a href="kfz.html" data-i18n="svc.kfz.t"></a>
+          <a href="haftpflicht.html" data-i18n="svc.haft.t"></a>
+          <a href="leben.html" data-i18n="svc.leben.t"></a>
+          <a href="hausrat.html" data-i18n="svc.hausrat.t"></a>
+          <a href="kranken.html" data-i18n="svc.kranken.t"></a>
+          <a href="altersvorsorge.html" data-i18n="svc.vorsorge.t"></a>
+          <a href="rechtsschutz.html" data-i18n="svc.recht.t"></a>
+          <a href="gewerbe.html" data-i18n="svc.gewerbe.t"></a>
+        </div>
+      </div>
+      <a href="rechner.html" data-i18n="nav.calc"></a>
+      <a href="ueber-uns.html" data-i18n="nav.about"></a>
+      <a href="termin.html" data-i18n="nav.book"></a>
+      <a href="kontakt.html" data-i18n="nav.contact"></a>
+      <div class="nav__mobileextra">
+        <div class="nav__sep"></div>
+        <a class="nav__contact" data-href="tel"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg> <span data-bind="phone"></span></a>
+        <a class="nav__contact" data-href="mail"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg> <span data-bind="email"></span></a>
+        <div class="nav__social">
+          <a data-href="instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+          <a data-href="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21 8.65 22 11 22 14.3V21h-4v-6c0-1.43-.03-3.27-2-3.27-2 0-2.3 1.56-2.3 3.17V21h-4z"/></svg></a>
+        </div>
+        <a class="btn btn--primary btn--block" href="termin.html" style="margin-top:.6rem" data-i18n="nav.cta"></a>
+      </div>
+    </div>
+    <div class="nav__right">
+      <div class="lang">
+        <button class="lang__btn" aria-label="Language"><span class="flag">🇩🇪</span><span class="lang__cur">DE</span> ▾</button>
+        <div class="lang__menu"></div>
+      </div>
+      <a class="btn btn--primary nav__cta" href="termin.html" data-i18n="nav.cta"></a>
+      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<!-- PAGE HERO -->
+<section class="phero phero--img" style="background-image:linear-gradient(160deg,rgba(7,30,74,.86),rgba(0,55,129,.70)),url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1700&q=80');background-size:cover;background-position:center">
+  <div class="container">
+    <div class="crumbs"><a href="index.html" data-i18n="nav.home"></a> · <span data-i18n="nav.calc"></span></div>
+    <h1 data-i18n="p.calc.t"></h1>
+    <p data-i18n="p.calc.s"></p>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="sec sec--pattern">
+  <div class="container">
+    <div class="calc reveal">
+      <div class="calc__tabs">
+        <button class="calc__tab active" data-tab="kfz"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l1.6-5.2A2 2 0 018.5 6.4h7A2 2 0 0117.4 7.8L19 13"/><path d="M3 13h18v5H3z"/><circle cx="7.5" cy="18" r="1.6"/><circle cx="16.5" cy="18" r="1.6"/></svg><span data-i18n="calc.tab.kfz"></span></button>
+        <button class="calc__tab" data-tab="vorsorge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg><span data-i18n="calc.tab.vorsorge"></span></button>
+        <button class="calc__tab" data-tab="multi"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg><span data-i18n="calc.tab.multi"></span></button>
+        <button class="calc__tab" data-tab="leben"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 10-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 000-7.8z"/></svg><span data-i18n="calc.tab.leben"></span></button>
+      </div>
+
+      <!-- KFZ -->
+      <div class="calc__pane active" data-pane="kfz">
+        <div class="calc__body">
+          <div class="calc__inputs">
+            <div class="field">
+              <label data-i18n="ck.vehicle"></label>
+              <div class="seg" id="k-vehicle">
+                <button data-val="small" data-i18n="ck.v.small"></button>
+                <button data-val="mid" class="sel" data-i18n="ck.v.mid"></button>
+                <button data-val="suv" data-i18n="ck.v.suv"></button>
+                <button data-val="lux" data-i18n="ck.v.lux"></button>
+              </div>
+            </div>
+            <div class="field">
+              <label data-i18n="ck.cover"></label>
+              <div class="seg" id="k-cover">
+                <button data-val="haft" class="sel" data-i18n="ck.c.haft"></button>
+                <button data-val="teil" data-i18n="ck.c.teil"></button>
+                <button data-val="voll" data-i18n="ck.c.voll"></button>
+              </div>
+            </div>
+            <div class="field">
+              <label><span data-i18n="ck.age"></span>: <span class="range-val" id="k-age-v">35</span></label>
+              <input class="range" type="range" id="k-age" min="18" max="80" value="35">
+            </div>
+            <div class="field">
+              <label><span data-i18n="ck.km"></span>: <span class="range-val" id="k-km-v"></span></label>
+              <input class="range" type="range" id="k-km" min="5000" max="50000" step="1000" value="15000">
+            </div>
+            <div class="field">
+              <label data-i18n="ck.region"></label>
+              <div class="seg" id="k-region">
+                <button data-val="city" data-i18n="ck.r.city"></button>
+                <button data-val="town" class="sel" data-i18n="ck.r.town"></button>
+                <button data-val="rural" data-i18n="ck.r.rural"></button>
+              </div>
+            </div>
+            <div class="field">
+              <label><span data-i18n="ck.sfr"></span>: <span class="range-val" id="k-sfr-v">8</span></label>
+              <input class="range" type="range" id="k-sfr" min="0" max="35" value="8">
+            </div>
+          </div>
+          <div class="calc__result">
+            <div class="lab" data-i18n="calc.result"></div>
+            <div class="calc__big"><span id="k-amount">—</span> <small data-i18n="calc.permonth"></small></div>
+            <div class="calc__bd">
+              <div class="row"><span data-i18n="ck.bd.base"></span><b id="k-bd-base">—</b></div>
+              <div class="row"><span data-i18n="ck.bd.cover"></span><b id="k-bd-cover">—</b></div>
+              <div class="row"><span data-i18n="ck.bd.region"></span><b id="k-bd-region">—</b></div>
+              <div class="row"><span data-i18n="ck.bd.sfr"></span><b id="k-bd-sfr">—</b></div>
+            </div>
+            <a class="btn btn--gold btn--block" href="termin.html" style="margin-top:1.4rem" data-i18n="calc.cta"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- VORSORGE -->
+      <div class="calc__pane" data-pane="vorsorge">
+        <div class="calc__body">
+          <div class="calc__inputs">
+            <div class="field">
+              <label><span data-i18n="cv.age"></span>: <span class="range-val" id="v-age-v">35</span></label>
+              <input class="range" type="range" id="v-age" min="18" max="63" value="35">
+            </div>
+            <div class="field">
+              <label><span data-i18n="cv.retire"></span>: <span class="range-val" id="v-retire-v">67</span></label>
+              <input class="range" type="range" id="v-retire" min="60" max="70" value="67">
+            </div>
+            <div class="field">
+              <label data-i18n="cv.income"></label>
+              <input class="input" type="number" id="v-income" value="2500" min="0" step="100">
+            </div>
+            <div class="field">
+              <label data-i18n="cv.saved"></label>
+              <input class="input" type="number" id="v-saved" value="5000" min="0" step="500">
+            </div>
+          </div>
+          <div class="calc__result">
+            <div class="lab" data-i18n="cv.result"></div>
+            <div class="calc__big"><span id="v-amount">—</span> <small data-i18n="calc.permonth"></small></div>
+            <div class="calc__sub"><span data-i18n="cv.gap"></span>: <b id="v-gap">—</b> <span data-i18n="calc.permonth"></span></div>
+            <div class="calc__bd">
+              <div class="row"><span data-i18n="cv.bd.years"></span><b id="v-bd-years">—</b></div>
+              <div class="row"><span data-i18n="cv.bd.target"></span><b id="v-bd-target">—</b></div>
+              <div class="row"><span data-i18n="cv.bd.state"></span><b id="v-bd-state">—</b></div>
+              <div class="row"><span data-i18n="cv.bd.gap"></span><b id="v-bd-gap">—</b></div>
+            </div>
+            <a class="btn btn--gold btn--block" href="termin.html" style="margin-top:1.4rem" data-i18n="calc.cta"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- MULTI -->
+      <div class="calc__pane" data-pane="multi">
+        <div class="calc__body">
+          <div class="calc__inputs">
+            <p class="form__note" style="margin-bottom:1.3rem" data-i18n="cm.intro"></p>
+            <div class="field">
+              <label data-i18n="cm.q1"></label>
+              <div class="seg" id="m-car"><button data-val="yes" class="sel" data-i18n="cm.yes"></button><button data-val="no" data-i18n="cm.no"></button></div>
+            </div>
+            <div class="field">
+              <label data-i18n="cm.q2"></label>
+              <div class="seg" id="m-house"><button data-val="rent" class="sel" data-i18n="cm.rent"></button><button data-val="own" data-i18n="cm.own"></button></div>
+            </div>
+            <div class="field">
+              <label data-i18n="cm.q3"></label>
+              <div class="seg" id="m-family"><button data-val="yes" class="sel" data-i18n="cm.yes"></button><button data-val="no" data-i18n="cm.no"></button></div>
+            </div>
+            <div class="field">
+              <label data-i18n="cm.q4"></label>
+              <div class="seg" id="m-self"><button data-val="yes" data-i18n="cm.yes"></button><button data-val="no" class="sel" data-i18n="cm.no"></button></div>
+            </div>
+          </div>
+          <div class="calc__result">
+            <div class="lab" data-i18n="cm.result"></div>
+            <div class="calc__big"><span id="m-count">—</span></div>
+            <div class="calc__sub" data-i18n="cm.reco"></div>
+            <div id="m-reco" style="margin-top:.4rem"></div>
+            <a class="btn btn--gold btn--block" href="termin.html" style="margin-top:1.4rem" data-i18n="calc.cta"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEBEN -->
+      <div class="calc__pane" data-pane="leben">
+        <div class="calc__body">
+          <div class="calc__inputs">
+            <div class="field">
+              <label data-i18n="cl.income"></label>
+              <input class="input" type="number" id="l-income" value="30000" min="0" step="1000">
+            </div>
+            <div class="field">
+              <label><span data-i18n="cl.years"></span>: <span class="range-val" id="l-years-v">15</span></label>
+              <input class="range" type="range" id="l-years" min="5" max="25" value="15">
+            </div>
+            <div class="field">
+              <label data-i18n="cl.debts"></label>
+              <input class="input" type="number" id="l-debts" value="50000" min="0" step="1000">
+            </div>
+            <div class="field">
+              <label><span data-i18n="cl.children"></span>: <span class="range-val" id="l-children-v">2</span></label>
+              <input class="range" type="range" id="l-children" min="0" max="6" value="2">
+            </div>
+          </div>
+          <div class="calc__result">
+            <div class="lab" data-i18n="cl.result"></div>
+            <div class="calc__big" id="l-amount">—</div>
+            <div class="calc__bd">
+              <div class="row"><span data-i18n="cl.bd.income"></span><b id="l-bd-income">—</b></div>
+              <div class="row"><span data-i18n="cl.bd.debts"></span><b id="l-bd-debts">—</b></div>
+              <div class="row"><span data-i18n="cl.bd.kids"></span><b id="l-bd-kids">—</b></div>
+            </div>
+            <a class="btn btn--gold btn--block" href="termin.html" style="margin-top:1.4rem" data-i18n="calc.cta"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="calc__disclaim center" style="margin-top:1.2rem" data-i18n="calc.disclaim"></p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec" style="padding-top:0">
+  <div class="container">
+    <div class="ctaband reveal">
+      <h2 data-i18n="cta.title"></h2>
+      <p data-i18n="cta.text"></p>
+      <div class="btn-row">
+        <a class="btn btn--gold btn--lg" href="termin.html" data-i18n="cta.btn1"></a>
+        <a class="btn btn--ghost btn--lg" data-href="tel" data-i18n="cta.btn2"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand"><img src="logo-light.svg" alt="Yapıcı Allianz"><p data-i18n="footer.tag"></p>
+        <div class="social"><a data-href="instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a><a data-href="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21 8.65 22 11 22 14.3V21h-4v-6c0-1.43-.03-3.27-2-3.27-2 0-2.3 1.56-2.3 3.17V21h-4z"/></svg></a></div></div>
+      <div><h4 data-i18n="footer.quick"></h4><ul>
+        <li><a href="index.html" data-i18n="nav.home"></a></li>
+        <li><a href="leistungen.html" data-i18n="nav.services"></a></li>
+        <li><a href="rechner.html" data-i18n="nav.calc"></a></li>
+        <li><a href="termin.html" data-i18n="nav.book"></a></li>
+      </ul></div>
+      <div><h4 data-i18n="footer.services"></h4><ul>
+        <li><a href="kfz.html" data-i18n="svc.kfz.t"></a></li>
+        <li><a href="altersvorsorge.html" data-i18n="svc.vorsorge.t"></a></li>
+        <li><a href="leben.html" data-i18n="svc.leben.t"></a></li>
+        <li><a href="hausrat.html" data-i18n="svc.hausrat.t"></a></li>
+      </ul></div>
+      <div><h4 data-i18n="footer.contact"></h4><ul>
+        <li data-bind="address"></li>
+        <li><a data-href="tel" data-bind="phone"></a></li>
+        <li><a data-href="mail" data-bind="email"></a></li>
+        <li data-bind="hours"></li>
+      </ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year></span> <span data-bind="agency"></span>. <span data-i18n="footer.rights"></span></span>
+      <span data-i18n="footer.legalnote"></span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" data-href="wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M.05 24l1.69-6.16a11.87 11.87 0 01-1.6-5.94C.14 5.34 5.5 0 12.08 0a11.82 11.82 0 018.42 3.49 11.82 11.82 0 013.49 8.42c0 6.57-5.35 11.92-11.92 11.92a11.9 11.9 0 01-5.7-1.45L.05 24zM6.6 20.13c1.68.99 3.27 1.59 5.48 1.59 5.46 0 9.91-4.44 9.91-9.91 0-5.48-4.43-9.91-9.9-9.91-5.48 0-9.91 4.43-9.91 9.91 0 2.3.67 4.02 1.8 5.83l-1 3.65 3.62-1.16zM17.9 14.6c-.07-.12-.27-.2-.57-.35-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.21-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.69.25-1.28.17-1.41z"/></svg>
+</a>
+
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+<script src="calc.js"></script>
+</body>
+</html>

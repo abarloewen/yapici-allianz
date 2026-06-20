@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Termin vereinbaren — Allianz Agentur Yapıcı</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <nav class="nav container">
+    <a class="brand" href="index.html"><img src="logo.svg" alt="Yapıcı Allianz"></a>
+    <div class="nav__links" id="navLinks">
+      <a href="index.html" data-i18n="nav.home"></a>
+      <div class="nav__drop">
+        <a href="leistungen.html" class="nav__droptoggle" data-i18n="nav.services"></a>
+        <div class="nav__menu">
+          <a href="kfz.html" data-i18n="svc.kfz.t"></a>
+          <a href="haftpflicht.html" data-i18n="svc.haft.t"></a>
+          <a href="leben.html" data-i18n="svc.leben.t"></a>
+          <a href="hausrat.html" data-i18n="svc.hausrat.t"></a>
+          <a href="kranken.html" data-i18n="svc.kranken.t"></a>
+          <a href="altersvorsorge.html" data-i18n="svc.vorsorge.t"></a>
+          <a href="rechtsschutz.html" data-i18n="svc.recht.t"></a>
+          <a href="gewerbe.html" data-i18n="svc.gewerbe.t"></a>
+        </div>
+      </div>
+      <a href="rechner.html" data-i18n="nav.calc"></a>
+      <a href="ueber-uns.html" data-i18n="nav.about"></a>
+      <a href="termin.html" data-i18n="nav.book"></a>
+      <a href="kontakt.html" data-i18n="nav.contact"></a>
+      <div class="nav__mobileextra">
+        <div class="nav__sep"></div>
+        <a class="nav__contact" data-href="tel"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg> <span data-bind="phone"></span></a>
+        <a class="nav__contact" data-href="mail"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg> <span data-bind="email"></span></a>
+        <div class="nav__social">
+          <a data-href="instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+          <a data-href="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21 8.65 22 11 22 14.3V21h-4v-6c0-1.43-.03-3.27-2-3.27-2 0-2.3 1.56-2.3 3.17V21h-4z"/></svg></a>
+        </div>
+        <a class="btn btn--primary btn--block" href="termin.html" style="margin-top:.6rem" data-i18n="nav.cta"></a>
+      </div>
+    </div>
+    <div class="nav__right">
+      <div class="lang"><button class="lang__btn" aria-label="Language"><span class="flag">🇩🇪</span><span class="lang__cur">DE</span> ▾</button><div class="lang__menu"></div></div>
+      <a class="btn btn--primary nav__cta" href="termin.html" data-i18n="nav.cta"></a>
+      <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<section class="phero phero--img" style="background-image:linear-gradient(160deg,rgba(7,30,74,.86),rgba(0,55,129,.70)),url('https://images.unsplash.com/photo-1745878136928-d1b3c10afc35?ixlib=rb-4.0.3&auto=format&fit=crop&w=1700&q=80');background-size:cover;background-position:center">
+  <div class="container">
+    <div class="crumbs"><a href="index.html" data-i18n="nav.home"></a> · <span data-i18n="nav.book"></span></div>
+    <h1 data-i18n="p.book.t"></h1>
+    <p data-i18n="p.book.s"></p>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="container">
+    <div class="wizard reveal">
+      <div class="wizard__bar">
+        <div class="wstep active"><div class="num">1</div><span data-i18n="book.s1"></span></div>
+        <div class="wstep"><div class="num">2</div><span data-i18n="book.s2"></span></div>
+        <div class="wstep"><div class="num">3</div><span data-i18n="book.s3"></span></div>
+        <div class="wstep"><div class="num">4</div><span data-i18n="book.s4"></span></div>
+      </div>
+
+      <div class="wizard__body">
+        <!-- STEP 0: service -->
+        <div class="wpane" data-step="0">
+          <h3 data-i18n="book.step1.t"></h3>
+          <div class="opts" data-grp="service">
+            <div class="opt" data-i18nkey="book.svc.kfz"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13l1.6-5.2A2 2 0 018.5 6.4h7A2 2 0 0117.4 7.8L19 13"/><path d="M3 13h18v5H3z"/><circle cx="7.5" cy="18" r="1.6"/><circle cx="16.5" cy="18" r="1.6"/></svg></div><div><b data-i18n="book.svc.kfz"></b></div></div>
+            <div class="opt" data-i18nkey="book.svc.vorsorge"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg></div><div><b data-i18n="book.svc.vorsorge"></b></div></div>
+            <div class="opt" data-i18nkey="book.svc.leben"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 10-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 000-7.8z"/></svg></div><div><b data-i18n="book.svc.leben"></b></div></div>
+            <div class="opt" data-i18nkey="book.svc.hausrat"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg></div><div><b data-i18n="book.svc.hausrat"></b></div></div>
+            <div class="opt" data-i18nkey="book.svc.gewerbe"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></div><div><b data-i18n="book.svc.gewerbe"></b></div></div>
+            <div class="opt" data-i18nkey="book.svc.other"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 015.8 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg></div><div><b data-i18n="book.svc.other"></b></div></div>
+          </div>
+        </div>
+
+        <!-- STEP 1: channel -->
+        <div class="wpane" data-step="1">
+          <h3 data-i18n="book.step2.t"></h3>
+          <div class="opts" data-grp="channel">
+            <div class="opt" data-i18nkey="book.ch.office"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg></div><div><b data-i18n="book.ch.office"></b><span data-i18n="book.ch.office.s"></span></div></div>
+            <div class="opt" data-i18nkey="book.ch.phone"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><b data-i18n="book.ch.phone"></b><span data-i18n="book.ch.phone.s"></span></div></div>
+            <div class="opt" data-i18nkey="book.ch.video"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div><div><b data-i18n="book.ch.video"></b><span data-i18n="book.ch.video.s"></span></div></div>
+            <div class="opt" data-i18nkey="book.ch.wa"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.05 24l1.69-6.16a11.87 11.87 0 01-1.6-5.94C.14 5.34 5.5 0 12.08 0a11.82 11.82 0 018.42 3.49 11.82 11.82 0 013.49 8.42c0 6.57-5.35 11.92-11.92 11.92a11.9 11.9 0 01-5.7-1.45L.05 24z"/></svg></div><div><b data-i18n="book.ch.wa"></b><span data-i18n="book.ch.wa.s"></span></div></div>
+          </div>
+        </div>
+
+        <!-- STEP 2: date/time -->
+        <div class="wpane" data-step="2">
+          <h3 data-i18n="book.step3.t"></h3>
+          <div class="field">
+            <label data-i18n="book.date"></label>
+            <input class="input" type="date" id="bk-date">
+          </div>
+          <div class="field">
+            <label data-i18n="book.time"></label>
+            <div class="slots">
+              <button class="slot" data-val="09:00">09:00</button>
+              <button class="slot" data-val="10:30">10:30</button>
+              <button class="slot" data-val="13:00">13:00</button>
+              <button class="slot" data-val="14:30">14:30</button>
+              <button class="slot" data-val="16:00">16:00</button>
+              <button class="slot" data-val="17:30">17:30</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 3: details -->
+        <div class="wpane" data-step="3">
+          <h3 data-i18n="book.step4.t"></h3>
+          <div class="form__row">
+            <div class="field"><label data-i18n="book.name"></label><input class="input" id="bk-name" type="text"></div>
+            <div class="field"><label data-i18n="book.phone"></label><input class="input" id="bk-phone" type="tel"></div>
+          </div>
+          <div class="form__row">
+            <div class="field"><label data-i18n="book.email"></label><input class="input" id="bk-email" type="email"></div>
+            <div class="field"><label data-i18n="book.lang"></label>
+              <select class="input" id="bk-lang">
+                <option value="de">Deutsch</option><option value="tr">Türkçe</option>
+                <option value="ru">Русский</option><option value="ar">العربية</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label data-i18n="book.msg"></label><textarea class="input" id="bk-msg"></textarea></div>
+        </div>
+
+        <!-- STEP 4: done -->
+        <div class="wpane" data-step="4">
+          <div class="wizard__done">
+            <div class="big-ic"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <h3 data-i18n="book.done.t"></h3>
+            <p class="muted" data-i18n="book.done.s"></p>
+            <div class="summary" id="bk-summary"></div>
+            <button class="btn btn--outline js-restart" style="margin-top:1.4rem" data-i18n="book.done.new"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="wizard__foot">
+        <button class="btn btn--outline js-back" data-i18n="book.back"></button>
+        <button class="btn btn--primary js-next" data-i18n="book.next"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--pattern">
+  <div class="container">
+    <div class="sec__head center reveal"><span class="kicker" data-i18n="book.title"></span><h2 data-i18n="tm.how.t"></h2></div>
+    <div class="steps reveal">
+      <div class="step"><div class="step__n">1</div><h3 data-i18n="tm.s1.t"></h3><p data-i18n="tm.s1.p"></p></div>
+      <div class="step"><div class="step__n">2</div><h3 data-i18n="tm.s2.t"></h3><p data-i18n="tm.s2.p"></p></div>
+      <div class="step"><div class="step__n">3</div><h3 data-i18n="tm.s3.t"></h3><p data-i18n="tm.s3.p"></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--tint">
+  <div class="container">
+    <div class="sec__head center reveal"><span class="kicker" data-i18n="why.kicker"></span><h2 data-i18n="why.title"></h2></div>
+    <div class="cards reveal">
+      <article class="card"><div class="card__ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><h3 data-i18n="why.1.t"></h3><p data-i18n="why.1.p"></p></article>
+      <article class="card"><div class="card__ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><h3 data-i18n="why.2.t"></h3><p data-i18n="why.2.p"></p></article>
+      <article class="card"><div class="card__ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></div><h3 data-i18n="why.3.t"></h3><p data-i18n="why.3.p"></p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="container">
+    <div class="sec__head center reveal"><span class="kicker" data-i18n="contact.kicker"></span><h2 data-i18n="tm.alt.t"></h2><p data-i18n="tm.alt.p"></p></div>
+    <div class="splitband reveal">
+      <a class="splitcard" data-href="tel"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></span><span><b data-bind="phone"></b><span data-i18n="common.callnow"></span></span></a>
+      <a class="splitcard" data-href="wa" target="_blank" rel="noopener"><span class="ic" style="background:#dcfce7;color:#128C4A"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.05 24l1.69-6.16a11.87 11.87 0 01-1.6-5.94C.14 5.34 5.5 0 12.08 0a11.82 11.82 0 018.42 3.49 11.82 11.82 0 013.49 8.42c0 6.57-5.35 11.92-11.92 11.92a11.9 11.9 0 01-5.7-1.45L.05 24z"/></svg></span><span><b data-i18n="common.whatsapp"></b><span data-i18n="book.ch.wa.s"></span></span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand"><img src="logo-light.svg" alt="Yapıcı Allianz"><p data-i18n="footer.tag"></p>
+        <div class="social"><a data-href="instagram" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a><a data-href="linkedin" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21 8.65 22 11 22 14.3V21h-4v-6c0-1.43-.03-3.27-2-3.27-2 0-2.3 1.56-2.3 3.17V21h-4z"/></svg></a></div></div>
+      <div><h4 data-i18n="footer.quick"></h4><ul>
+        <li><a href="index.html" data-i18n="nav.home"></a></li>
+        <li><a href="leistungen.html" data-i18n="nav.services"></a></li>
+        <li><a href="rechner.html" data-i18n="nav.calc"></a></li>
+        <li><a href="termin.html" data-i18n="nav.book"></a></li>
+      </ul></div>
+      <div><h4 data-i18n="footer.services"></h4><ul>
+        <li><a href="kfz.html" data-i18n="svc.kfz.t"></a></li>
+        <li><a href="altersvorsorge.html" data-i18n="svc.vorsorge.t"></a></li>
+        <li><a href="leben.html" data-i18n="svc.leben.t"></a></li>
+        <li><a href="hausrat.html" data-i18n="svc.hausrat.t"></a></li>
+      </ul></div>
+      <div><h4 data-i18n="footer.contact"></h4><ul>
+        <li data-bind="address"></li>
+        <li><a data-href="tel" data-bind="phone"></a></li>
+        <li><a data-href="mail" data-bind="email"></a></li>
+        <li data-bind="hours"></li>
+      </ul></div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year></span> <span data-bind="agency"></span>. <span data-i18n="footer.rights"></span></span>
+      <span data-i18n="footer.legalnote"></span>
+    </div>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+<script src="booking.js"></script>
+</body>
+</html>

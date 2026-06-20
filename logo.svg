@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 56" width="230" height="56" role="img" aria-label="Yapıcı Allianz">
+  <g>
+    <rect x="2" y="6" width="44" height="44" rx="12" fill="#003781"/>
+    <path d="M14 28 l7 7 13-15" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="14" y="40" width="20" height="3" rx="1.5" fill="#C9A24B"/>
+  </g>
+  <text x="58" y="28" font-family="Plus Jakarta Sans, Segoe UI, sans-serif" font-size="22" font-weight="800" fill="#002659" letter-spacing="-0.5">YAPICI</text>
+  <text x="58" y="44" font-family="Inter, Segoe UI, sans-serif" font-size="9.5" font-weight="600" fill="#5A6B82" letter-spacing="3">ALLIANZ AGENTUR</text>
+</svg>
