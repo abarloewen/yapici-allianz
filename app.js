@@ -2,6 +2,41 @@
    Yapıcı · Allianz Agentur — core app
    Language engine (DE/TR/RU/AR + RTL), nav, reveal, FAQ
    ========================================================= */
+
+/* ---- password gate (soft, client-side preview protection) ---- */
+(function(){
+  "use strict";
+  var PW = "avb";
+  try{ if(sessionStorage.getItem("yp_gate")==="1") return; }catch(e){}
+  function mount(){
+    var ov = document.createElement("div");
+    ov.className = "gate";
+    ov.innerHTML =
+      '<div class="gate__box">'
+      + '<img src="logo.svg" alt="Yapıcı Allianz" onerror="this.style.display=\'none\'">'
+      + '<h2>Geschützte Vorschau</h2>'
+      + '<p>Bitte geben Sie das Passwort ein, um die Website-Vorschau anzusehen.</p>'
+      + '<input type="password" id="gate-pw" autocomplete="off" placeholder="Passwort" aria-label="Passwort">'
+      + '<div class="gate__err" id="gate-err"></div>'
+      + '<button class="btn btn--primary btn--block" id="gate-go">Weiter</button>'
+      + '</div>';
+    document.documentElement.classList.add("gate-locked");
+    document.body.appendChild(ov);
+    var inp = ov.querySelector("#gate-pw"), err = ov.querySelector("#gate-err");
+    function unlock(){
+      if(inp.value === PW){
+        try{ sessionStorage.setItem("yp_gate","1"); }catch(e){}
+        document.documentElement.classList.remove("gate-locked");
+        ov.parentNode && ov.parentNode.removeChild(ov);
+      } else { err.textContent = "Falsches Passwort."; inp.value=""; inp.focus(); }
+    }
+    ov.querySelector("#gate-go").addEventListener("click", unlock);
+    inp.addEventListener("keydown", function(e){ if(e.key==="Enter") unlock(); });
+    inp.focus();
+  }
+  if(document.body) mount(); else document.addEventListener("DOMContentLoaded", mount);
+})();
+
 (function(){
   "use strict";
   var I18N = window.I18N || {};
